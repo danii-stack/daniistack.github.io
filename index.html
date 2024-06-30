@@ -19,7 +19,7 @@
         document.getElementById('nameForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
-            window.location.href = 'ucapan' + encodeURIComponent(name);
+            window.location.href = 'ucapan.html?name=' + encodeURIComponent(name);
         });
     </script>
 </body>
