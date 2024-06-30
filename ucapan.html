@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function getName() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('name');
+        }
+
+        window.onload = function() {
+            const name = getName();
+            document.getElementById('name').textContent = name;
+            document.getElementById('next-link').href = 'galeri.html?name=' + encodeURIComponent(name);
+        }
+    </script>
+</head>
+<body>
+    <h1>Barakallah Fii Umrik , <span id="name"></span>!</h1>
+    <p>"Semoga setiap tahun yang Allah anugerahkan padamu membawa kebahagiaan, kesuksesan, dan kesejahteraan."<br>"Semoga Allah senantiasa melindungi dan memberkahi langkah-langkahmu." </p>
+    <a id="next-link" href="galeri.html">selanjutnya</a>
+    
+    <!-- Tambahkan elemen audio untuk memutar lagu otomatis -->
+    <audio autoplay loop>
+        <source src="audio/lagu.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+    </audio>
+
+    <!-- Tambahkan elemen bintang berterbangan -->
+    <div class="stars">
+        <div class="star" ></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <div class="watermark">Dibuat oleh luksima</div>
+
+</body>
+</html>

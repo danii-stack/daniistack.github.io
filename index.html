@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukkan Nama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Masukkan Nama</h1>
+    <form id="nameForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Lanjut</button>
+    </form>
+    <div class="watermark">Dibuat oleh luksima</div>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            window.location.href = 'ucapan.html?name=' + encodeURIComponent(name);
+        });
+    </script>
+</body>
+</html>
